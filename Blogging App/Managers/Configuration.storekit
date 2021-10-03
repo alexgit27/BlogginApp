@@ -1,0 +1,53 @@
+{
+  "identifier" : "8559B763",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "EED3F13A",
+      "localizations" : [
+
+      ],
+      "name" : "Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "displayPrice" : "0999",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "86470C2D",
+          "introductoryOffer" : {
+            "displayPrice" : "",
+            "internalID" : "26AF6BCE",
+            "paymentMode" : "none"
+          },
+          "localizations" : [
+            {
+              "description" : "Get access to all Thoughts posts.",
+              "displayName" : "Premium Monthly",
+              "locale" : "en_GB"
+            }
+          ],
+          "productID" : "alex.Blogging_App.premium",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Premium Monthly",
+          "subscriptionGroupID" : "EED3F13A",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}
