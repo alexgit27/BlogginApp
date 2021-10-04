@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Purchases
 
 class SignInViewController: UIViewController {
 
