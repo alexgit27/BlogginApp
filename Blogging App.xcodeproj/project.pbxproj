@@ -32,6 +32,7 @@
 		A8B9DCEC270883C400E4A829 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8B9DCEB270883C400E4A829 /* GoogleService-Info.plist */; };
 		A8B9DCEE27088BB700E4A829 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9DCED27088BB700E4A829 /* User.swift */; };
 		A8B9DCF027088BBE00E4A829 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9DCEF27088BBE00E4A829 /* BlogPost.swift */; };
+		A8F20FDC270C485900D2BF6D /* SignInHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F20FDB270C485900D2BF6D /* SignInHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		A8B9DCEB270883C400E4A829 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8B9DCED27088BB700E4A829 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A8B9DCEF27088BBE00E4A829 /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		A8F20FDB270C485900D2BF6D /* SignInHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInHeaderView.swift; sourceTree = "<group>"; };
 		B9E1E87CAE08EB627B02CC5E /* Pods-Blogging App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blogging App.debug.xcconfig"; path = "Target Support Files/Pods-Blogging App/Pods-Blogging App.debug.xcconfig"; sourceTree = "<group>"; };
 		D8B5AE3E3A38AB4F1A8529E7 /* Pods-Blogging App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blogging App.release.xcconfig"; path = "Target Support Files/Pods-Blogging App/Pods-Blogging App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +137,7 @@
 				A81DD5A126A9BB7700CCA251 /* LaunchScreen.storyboard */,
 				A852DB8A2709BDB1001842ED /* PayWallHeaderView.swift */,
 				A852DB8E2709E03F001842ED /* PayWallDescriptionView.swift */,
+				A8F20FDB270C485900D2BF6D /* SignInHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				A852DB8B2709BDB1001842ED /* PayWallHeaderView.swift in Sources */,
 				A81DD59726A9BB7600CCA251 /* AppDelegate.swift in Sources */,
 				A81DD5B726A9BE4000CCA251 /* SignInViewController.swift in Sources */,
+				A8F20FDC270C485900D2BF6D /* SignInHeaderView.swift in Sources */,
 				A852DB8F2709E03F001842ED /* PayWallDescriptionView.swift in Sources */,
 				A8B9DCEE27088BB700E4A829 /* User.swift in Sources */,
 				A81DD5B326A9BE0B00CCA251 /* ProfileViewController.swift in Sources */,

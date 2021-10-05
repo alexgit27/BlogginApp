@@ -94,7 +94,7 @@ final class IAPMAnager {
 		Purchases.shared.restoreTransactions { info, error in
 			guard let entitlements = info?.entitlements, error == nil else { return }
 			
-			if entitlements.all["premium"]?.isActive == true {
+			if entitlements.all["Premium"]?.isActive == true {
 				print("Restore Sucsess")
 				UserDefaults.standard.setValue(true, forKey: "premium")
 				completion(true)
