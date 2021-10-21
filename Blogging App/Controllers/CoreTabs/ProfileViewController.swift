@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController {
 		setupSignOutButton()
 		setupTable()
 		title = "Profile"
-		
+		fetchPosts()
     }
 	
 	override func viewDidLayoutSubviews() {
@@ -57,15 +57,15 @@ class ProfileViewController: UIViewController {
 	private func setupTableHeader(profilePhotoUrl: String? = nil, name: String? = nil) {
 		//MARK: HeaderView
 		let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: view.width / 1.5))
-		headerView.isUserInteractionEnabled = true
 		headerView.backgroundColor = .systemBlue
 		headerView.clipsToBounds = true
+		headerView.isUserInteractionEnabled = true
 		tableView.tableHeaderView = headerView
 		
 		//MARK: ProfilePhoto
 		let profilePhoto = UIImageView(image: UIImage(systemName: "person.circle"))
-		profilePhoto.tintColor = .black
-//		profilePhoto.contentMode = .scaleAspectFit
+		profilePhoto.tintColor = .white
+		profilePhoto.contentMode = .scaleAspectFit
 		profilePhoto.frame = CGRect(
 			x: (view.width - (view.width / 4)) / 2,
 			y: (headerView.height - (view.width / 4)) / 2.5,
@@ -78,6 +78,7 @@ class ProfileViewController: UIViewController {
 		let tap = UITapGestureRecognizer(target: self, action: #selector(didTapProfilePhoto))
 		profilePhoto.addGestureRecognizer(tap)
 		
+		profilePhoto.backgroundColor = .systemOrange
 		//MARK: EmailLabel
 		let emailLabel = UILabel(frame: CGRect(x: 20, y: profilePhoto.bottom + 10, width: view.width - 40, height: 100))
 		emailLabel.text = currentEmail
@@ -158,7 +159,14 @@ class ProfileViewController: UIViewController {
 	
 	private var posts: [BlogPost] = []
 	
-	private func fetchPosts() {}
+	private func fetchPosts() {
+		DatabaseManager.shared.getPosts(for: currentEmail) { [weak self] posts in
+			self?.posts = posts
+			DispatchQueue.main.async {
+				self?.tableView.reloadData()
+			}
+		}
+	}
 }
 
 //MARK: - UITableViewDelegate
@@ -172,7 +180,9 @@ extension ProfileViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		cell.textLabel?.text = "Blog post"
+		
+		let post = posts[indexPath.row]
+		cell.textLabel?.text = post.title
 		
 		return cell
 	}

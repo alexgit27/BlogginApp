@@ -9,15 +9,6 @@ import Foundation
 import Purchases
 import StoreKit
 
-//MARK: - App-Specific Shared Secret
-
-///690fa82ae7e340a09225019dedd2d788
-
-//MARK: - App-Specific Shared Secret
-
-//MARK: - Purchases
-// premium: alex.Blogging_App.premium
-
 final class IAPMAnager {
 	
 	static let shared = IAPMAnager()
