@@ -13,6 +13,8 @@ final class IAPMAnager {
 	
 	static let shared = IAPMAnager()
 	
+	var postEligableViewDate: Date?
+	
 	private init() {}
 	
 	func isPremium() -> Bool {
@@ -99,3 +101,25 @@ final class IAPMAnager {
 	
 }
 
+// MARK: - Track Post Views
+extension IAPMAnager {
+	var canViewPost: Bool {
+		if isPremium() {
+			return true
+		}
+		
+		guard let date = postEligableViewDate else { return true}
+		UserDefaults.standard.set(0, forKey: "post_views")
+		return Date() >= date
+	}
+	
+	public func logPostView() {
+		let total = UserDefaults.standard.integer(forKey: "post_views")
+		UserDefaults.standard.set(total + 1, forKey: "post_views")
+
+		if total == 2 {
+			let hour: TimeInterval = 60 * 60
+			postEligableViewDate = Date().addingTimeInterval(hour * 24)
+		}
+	}
+}
