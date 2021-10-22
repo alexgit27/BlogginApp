@@ -13,7 +13,19 @@ final class IAPMAnager {
 	
 	static let shared = IAPMAnager()
 	
-	var postEligableViewDate: Date?
+	static let formatter = ISO8601DateFormatter()
+	
+	var postEligableViewDate: Date? {
+		get {
+			guard let string = UserDefaults.standard.string(forKey: "postEligableViewDate") else { return nil }
+			return IAPMAnager.formatter.date(from: string)
+		}
+		set {
+			guard let date = newValue else { return }
+			let string = IAPMAnager.formatter.string(from: date)
+			UserDefaults.standard.set(string, forKey: "postEligableViewDate")
+		}
+	}
 	
 	private init() {}
 	

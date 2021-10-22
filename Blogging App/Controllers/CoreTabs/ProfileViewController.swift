@@ -140,6 +140,7 @@ class ProfileViewController: UIViewController {
 					DispatchQueue.main.async {
 						UserDefaults.standard.setValue(nil, forKey: "email")
 						UserDefaults.standard.setValue(nil, forKey: "name")
+						UserDefaults.standard.set(false, forKey: "premium")
 						
 						let signInVC = SignInViewController()
 						signInVC.navigationItem.largeTitleDisplayMode = .always
@@ -194,6 +195,8 @@ extension ProfileViewController: UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		
+		Haptics.shared.vibrateForSelection()
 		
 		var isOwnedByCurrentUser = false
 		if let email = UserDefaults.standard.string(forKey: "email") {

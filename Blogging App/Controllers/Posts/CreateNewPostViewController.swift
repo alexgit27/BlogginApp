@@ -100,7 +100,10 @@ class CreateNewPostViewController: UIViewController {
 			guard success else { return }
 			
 			StorageManager.shared.downloadUrlForPostHeader(email: email, postId: newPostId) { url in
-				guard let headerUrl = url else { print("Failed to uplad url for header"); return }
+				guard let headerUrl = url else {
+					DispatchQueue.main.async { Haptics.shared.vibrate(for: .error) }
+					return
+				}
 				
 				let post = BlogPost(identifier: newPostId,
 									title: title,
@@ -109,9 +112,13 @@ class CreateNewPostViewController: UIViewController {
 									text: body)
 				
 				DatabaseManager.shared.insert(blogPost: post, email: email) { [weak self] posted in
-					guard posted else { print("Failed to post new blog article!"); return }
+					guard posted else {
+						DispatchQueue.main.async { Haptics.shared.vibrate(for: .error) }
+						return
+					}
 					
 					DispatchQueue.main.async {
+						Haptics.shared.vibrate(for: .success)
 						self?.didTapCancel()
 					}
 				}

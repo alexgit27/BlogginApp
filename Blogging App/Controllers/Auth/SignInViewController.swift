@@ -91,8 +91,12 @@ class SignInViewController: UIViewController {
 		guard let email = emailField.text, !email.isEmpty,
 			  let password = passwordField.text, !password.isEmpty else { return }
 		
+		Haptics.shared.vibrateForSelection()
+		
 		AuthManager.shared.signIn(email: email, password: password) { [weak self] success in
 			guard success else { return }
+			
+			IAPMAnager.shared.getSubscriptionStatus(completion: nil)
 			
 			DispatchQueue.main.async {
 				UserDefaults.standard.setValue(email, forKey: "email")
