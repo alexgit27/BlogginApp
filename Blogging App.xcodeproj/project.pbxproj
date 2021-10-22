@@ -25,6 +25,8 @@
 		A81DD5C126A9BEFC00CCA251 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD5C026A9BEFC00CCA251 /* DatabaseManager.swift */; };
 		A81DD5C326A9BF0400CCA251 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD5C226A9BF0400CCA251 /* AuthManager.swift */; };
 		A81DD5C526A9BF2400CCA251 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81DD5C426A9BF2400CCA251 /* StorageManager.swift */; };
+		A82B640527229858009D32DC /* PostPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B640427229858009D32DC /* PostPreviewTableViewCell.swift */; };
+		A82B640727229879009D32DC /* PostHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82B640627229879009D32DC /* PostHeaderTableViewCell.swift */; };
 		A852DB872709B2C1001842ED /* PayWallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852DB862709B2C1001842ED /* PayWallViewController.swift */; };
 		A852DB8B2709BDB1001842ED /* PayWallHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852DB8A2709BDB1001842ED /* PayWallHeaderView.swift */; };
 		A852DB8D2709CE62001842ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A852DB8C2709CE62001842ED /* Extensions.swift */; };
@@ -57,6 +59,8 @@
 		A81DD5C026A9BEFC00CCA251 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		A81DD5C226A9BF0400CCA251 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		A81DD5C426A9BF2400CCA251 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		A82B640427229858009D32DC /* PostPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPreviewTableViewCell.swift; sourceTree = "<group>"; };
+		A82B640627229879009D32DC /* PostHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		A852DB862709B2C1001842ED /* PayWallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallViewController.swift; sourceTree = "<group>"; };
 		A852DB8A2709BDB1001842ED /* PayWallHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayWallHeaderView.swift; sourceTree = "<group>"; };
 		A852DB8C2709CE62001842ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 		A81DD5AE26A9BD4200CCA251 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A82B640327229834009D32DC /* Cells */,
 				A81DD5A126A9BB7700CCA251 /* LaunchScreen.storyboard */,
 				A852DB8A2709BDB1001842ED /* PayWallHeaderView.swift */,
 				A852DB8E2709E03F001842ED /* PayWallDescriptionView.swift */,
@@ -204,6 +209,15 @@
 				A81DD5BC26A9BE8900CCA251 /* CreateNewPostViewController.swift */,
 			);
 			path = Posts;
+			sourceTree = "<group>";
+		};
+		A82B640327229834009D32DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A82B640427229858009D32DC /* PostPreviewTableViewCell.swift */,
+				A82B640627229879009D32DC /* PostHeaderTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A852DB852709B2AF001842ED /* Other */ = {
@@ -346,10 +360,12 @@
 				A81DD5B926A9BE4A00CCA251 /* SignUpViewController.swift in Sources */,
 				A852DB8B2709BDB1001842ED /* PayWallHeaderView.swift in Sources */,
 				A81DD59726A9BB7600CCA251 /* AppDelegate.swift in Sources */,
+				A82B640727229879009D32DC /* PostHeaderTableViewCell.swift in Sources */,
 				A81DD5B726A9BE4000CCA251 /* SignInViewController.swift in Sources */,
 				A8F20FDC270C485900D2BF6D /* SignInHeaderView.swift in Sources */,
 				A852DB8F2709E03F001842ED /* PayWallDescriptionView.swift in Sources */,
 				A8B9DCEE27088BB700E4A829 /* User.swift in Sources */,
+				A82B640527229858009D32DC /* PostPreviewTableViewCell.swift in Sources */,
 				A81DD5B326A9BE0B00CCA251 /* ProfileViewController.swift in Sources */,
 				A81DD5BD26A9BE8900CCA251 /* CreateNewPostViewController.swift in Sources */,
 				A81DD5BF26A9BECD00CCA251 /* IAPManager.swift in Sources */,
