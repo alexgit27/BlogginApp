@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 import Purchases
 
+//GIT
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
