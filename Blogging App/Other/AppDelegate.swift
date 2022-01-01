@@ -11,6 +11,7 @@ import Purchases
 
 //GIT
 //GIT2
+//GIT3
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
