@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 		IAPMAnager.shared.getSubscriptionStatus(completion: nil)
 		
+        // Test updated token git
 		return true
 	}
 
